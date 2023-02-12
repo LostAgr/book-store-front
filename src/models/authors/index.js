@@ -1,0 +1,1 @@
+export { useFetchAuthors } from './use-authors';

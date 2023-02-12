@@ -1,0 +1,14 @@
+.book-card {
+    height: 230px;
+    width: 150px;
+}
+
+.contain {
+    display: flex;
+    align-items: center;
+
+}
+
+.book-info {
+    margin-left: 20px;
+}

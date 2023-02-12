@@ -1,0 +1,18 @@
+.radio {
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.radio input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.radio input:last-child {
+    margin-left: 20px;
+}
