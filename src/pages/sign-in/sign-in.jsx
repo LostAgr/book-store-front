@@ -1,7 +1,7 @@
-import { Textfield } from "../components";
+import { Textfield } from "../../components";
 import { Link } from 'react-router-dom';
 import './sign-in.css';
-import { Textfieldsubmit } from '../components/textfield';
+import { Textfieldsubmit } from '../../components/textfield';
 import { useForm } from 'react-hook-form';
 import { joiResolver } from '@hookform/resolvers/joi';
 import Joi from "joi";
@@ -32,7 +32,7 @@ export const SignIn = (props) => {
     axios.post(urlAuth, userData)
     .then(function (response) {
       localStorage.setItem('access_token', response.data.access_token)
-      window.location.href = "/book-store"
+      window.location.href = '/book-store'
     })
     .catch(function (error) {
       console.log(error);

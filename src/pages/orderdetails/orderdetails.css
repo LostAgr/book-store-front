@@ -1,0 +1,82 @@
+.wrapper-order {
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.order {
+    background: rgba(255, 255, 255, .4);
+    padding: 15px;
+    border-radius: 10px;
+    width: 1280px;
+    box-sizing: border-box;
+}
+
+.order-data {
+    margin-top: 5px;
+}
+
+.button-order {
+    box-sizing: border-box;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.button-order:hover {
+    cursor: pointer;
+    background-color: rgb(53, 172, 53);
+}
+
+.input-order {
+    width: 200px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px 12px;
+}
+
+.order-label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.order-input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-input-flex {
+    width: 420px;
+    margin: 10px 0 15px 0;
+}
+
+.order-name {
+    margin-bottom: 5px;
+}
+
+.order-item {
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+}
+
+.order-item li {
+    margin-right: 50px;
+}
+
+.order-delivery {
+    margin: 20px 0;
+}
+
+.order-delivery-wrapper {
+    width: 420px;
+}
+
+.order-delivery-wrapper button {
+    margin-top: 5px;
+}

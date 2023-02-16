@@ -1,14 +1,38 @@
 .book-card {
-    height: 230px;
     width: 150px;
+    float: left;
 }
 
-.contain {
-    display: flex;
-    align-items: center;
-
+.book-card:hover {
+    cursor: pointer;
 }
 
 .book-info {
-    margin-left: 20px;
+    margin-left: 170px;
+}
+
+.button-shop {
+    height: 25px;
+    width: 100%;
+    border-radius: 10px;
+    float: right;
+    border: 0px;
+    margin-top: 5px;
+    background-color: rgb(24, 179, 24);
+}
+
+.button-shop:hover {
+    cursor: pointer;
+}
+
+.contain {
+    margin-bottom: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .3);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.contain:hover {
+    background: rgba(255, 255, 255, .4);
 }

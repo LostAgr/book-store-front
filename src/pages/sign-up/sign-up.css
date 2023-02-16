@@ -10,7 +10,9 @@ body {
     color: #222;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    background-image: url('../../public/image/book.jpg');
+    background-image: 
+    linear-gradient(to top, rgba(32, 34, 30, 0.1), rgba(20, 22, 20, 0.1)),
+    url('../../../public/image/book.jpg');
 }
 
 .wrapper {

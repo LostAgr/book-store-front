@@ -1,3 +1,4 @@
+import { Pagination } from '../pagination';
 import { Item } from '../item/item';
 import './items.css';
 
@@ -10,12 +11,13 @@ export const Items = (props) => {
       <article>
         {
           data.map(item => (
-            <div key={item.id}>
-              <Item data={item} />
+            <div className='card-items' key={item.id}>
+              <Item counter={props.counter} data={item} />
             </div>
           ))
         }
-      </article> 
+        {props.data && <Pagination nextPageChange={props.nextPageChange} activeItem={props.activeItem} prevPageChange={props.prevPageChange} handlePageChange={props.handlePageChange} {...props.data.metaData} />}
+      </article>
     </main>
   )
 }

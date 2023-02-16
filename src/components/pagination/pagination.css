@@ -1,0 +1,32 @@
+.pagination-container {
+    background: rgba(255, 255, 255, .4);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-pagination-number {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.button-pagination-next {
+    border-radius: 5px;
+    border: 0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.button-pagination-number:hover ,
+.button-pagination-next:hover {
+    background: rgba(255, 255, 255, .5)
+}
+
+.button-pagination-used {
+    background-color: green;
+}

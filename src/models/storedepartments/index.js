@@ -1,0 +1,1 @@
+export { useFetchStoreDepartmens } from './use-storedepartments.jsx';

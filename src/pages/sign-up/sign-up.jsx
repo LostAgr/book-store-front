@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
-import { Button, Dropdown, Radio, Textfield } from '../components'
-import { Textfieldsubmit } from '../components/textfield'
+import { Button, Dropdown, Radio, Textfield } from '../../components'
+import { Textfieldsubmit } from '../../components/textfield'
 import './sign-up.css';
 import { joiResolver } from '@hookform/resolvers/joi';
 import Joi from "joi";
@@ -48,6 +48,7 @@ export const SignUp = () => {
     axios.post(urlPostUserData, data)
     .then(function (response) {
       console.log(response.data);
+      window.location.href = '/';
     })
     .catch(function (error) {
       console.log(error);
