@@ -1,4 +1,4 @@
-import { useFetchLanguages } from '../../models/language';
+import { useFetchLanguages } from '../../models/languages';
 import './filterlanguage.css';
 
 export const Filterlanguage = (props) => {

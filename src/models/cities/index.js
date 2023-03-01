@@ -1,1 +1,1 @@
-export { useFetchCitiesies } from './use-cities.jsx';
+export { useFetchCities } from './use-cities.jsx';

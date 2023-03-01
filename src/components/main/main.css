@@ -17,3 +17,7 @@
 .main {
     flex: 1 1 82%;
 }
+
+.sidebar-title {
+    margin-bottom: 10px;
+}

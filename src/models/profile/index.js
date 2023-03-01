@@ -1,1 +1,1 @@
-export { useFetchProfile } from './use-profile.jsx'
+export { useFetchProfile } from './use-profile.jsx';

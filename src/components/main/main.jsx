@@ -4,9 +4,8 @@ import { useFetchBooks } from '../../models';
 import { FilterAuthors } from '../filterAuthors';
 import { Filtercategory } from '../filtercategory';
 import { Filterlanguage } from '../filterlanguage';
-import { Filterprice } from '../filterprice/filterprice';
 import { Items } from '../items';
-import './main.css'
+import './main.css';
 
 export const Main = (props) => {
 
@@ -21,6 +20,8 @@ export const Main = (props) => {
   } = useForm({});
 
   const fetchBooks = useFetchBooks({params});
+
+  console.log()
 
   const search = props.search;
 
@@ -60,16 +61,15 @@ export const Main = (props) => {
   return (
     <div className='main_wrapper'>
         <div className='sidebar'>
-            <h3>Фильтр</h3>
+            <h3 className='sidebar-title'>Фильтр</h3>
             <form className='formClass'>
               <Filtercategory name='categories' errors={errors} register={register} />
               <Filterlanguage name='languages' errors={errors} register={register} />
               <FilterAuthors name='authors' errors={errors} register={register} />
-              <Filterprice errors={errors} register={register} />
             </form>
         </div>
         <div className='main'>
-            <Items counter={props.counter} data={fetchBooks.data} activeItem={params.page} nextPageChange={nextPageChange} prevPageChange={prevPageChange} handlePageChange={handlePageChange} />
+            <Items data={fetchBooks.data} activeItem={params.page} nextPageChange={nextPageChange} prevPageChange={prevPageChange} handlePageChange={handlePageChange} />
         </div>
     </div>
   )

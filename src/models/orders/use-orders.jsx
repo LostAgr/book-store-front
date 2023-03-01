@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { API } from '../../common/API';
 
-export const useFetchCities = () => {
+export const useCreateOrder = () => {
 
-    const [state, setState] = useState({ data:[], isLoading:false, isLoaded:false, error:null })
+    const [state, setState] = useState({ data: null, isLoading:false, isLoaded:false, error:null })
 
-    useEffect(() => {
+    const createOrder = (data) => {
         setState((prevState) => ({...prevState, isLoading: true}))
-        API.get('/cities')
+        API.post('/orders', data)
         .then(({data}) => setState((prevState) => ({...prevState, data, isLoaded: true, isLoading: false})))
         .catch(({message}) => setState((prevState) => ({...prevState, error: message, isLoading: false})))
-      }, [])
+      }
 
-  return state;
+  return {...state, createOrder};
 }

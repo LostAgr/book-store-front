@@ -1,9 +1,10 @@
 .radio {
     display: flex;
     color: white;
+    position: relative;
     align-items: center;
     font-size: 12px;
-    margin-bottom: 10px;
+    padding: 10px 0;
 }
 
 .radio input {

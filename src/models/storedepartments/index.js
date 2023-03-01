@@ -1,1 +1,1 @@
-export { useFetchStoreDepartmens } from './use-storedepartments.jsx';
+export { useFetchStoreDepartments } from './use-storedepartments.jsx';

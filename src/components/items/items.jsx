@@ -12,7 +12,7 @@ export const Items = (props) => {
         {
           data.map(item => (
             <div className='card-items' key={item.id}>
-              <Item counter={props.counter} data={item} />
+              <Item data={item} />
             </div>
           ))
         }

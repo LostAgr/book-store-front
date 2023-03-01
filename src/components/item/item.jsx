@@ -1,18 +1,26 @@
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useDispatch } from 'react-redux';
+import { ADDTOORDERBOOK } from '../../redux/types';
 import './item.css';
 
 
 export const Item = (props) => {
 
-  const data = props.data
+  const data = props.data;
+
+  const dispatch = useDispatch();
+
+  const handleBuy = () => {
+    dispatch({type: ADDTOORDERBOOK, book: data})
+  }
 
   return (
     <div className='contain'>
       <div className='book-card'>
         <img className='book-card' src='./image/book-card.jpg' alt='book' />
         <h6>Количество страниц: {data.pages}</h6>
-        <button onClick={props.counter} className='button-shop'>Купить <FontAwesomeIcon icon={faCartShopping} /></button>
+        <button onClick={handleBuy} className='button-shop'>Купить <FontAwesomeIcon icon={faCartShopping} /></button>
       </div>
       <div className='book-info'>
         <h1>{data.title}</h1>

@@ -6,28 +6,38 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { Search } from '../search';
 import { useState } from 'react';
 import { useFetchProfile } from '../../models/profile';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export const Header = (props) => {
 
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
+  const navigate = useNavigate()
+
+  const totalOrderBooks = useSelector((state) => state.orderBooks.totalCount);
+
   const isOpen = () => {
-    setIsProfileOpen(!isProfileOpen)
+    setIsProfileOpen(!isProfileOpen);
   }
 
   const logaut = () => {
-    localStorage.removeItem('access_token')
-    window.location.href = "/"
+    localStorage.removeItem('access_token');
+    window.location.href = '/';
+  }
+
+  const toStatusOrder = () => {
+    navigate('/order-status');
   }
 
   const profile = useFetchProfile();
 
   const toOrderDetails = () => {
-    window.location.href = 'order-details';
+    navigate('/order-details');
   }
 
   const toBookStore = () => {
-    window.location.href = 'book-store';
+    navigate('/book-store');
   }
 
   return (
@@ -42,8 +52,8 @@ export const Header = (props) => {
             <li>Новости</li>
             <li>Контакты</li>
             <li className='profile-icon'>
-              <FontAwesomeIcon onClick={toOrderDetails} icon={faCartShopping} />{props.isCountEnable && (
-                <div className='cart-count'>{props.count}</div>
+              <FontAwesomeIcon onClick={toOrderDetails} icon={faCartShopping} />{(totalOrderBooks > 0) && (
+                <div className='cart-count'>{totalOrderBooks}</div>
               )}
             </li>
             <li className='profile-icon'>
@@ -51,8 +61,8 @@ export const Header = (props) => {
               <div className='profile-icon-open'>
                 <ul className='profile-icon-menu'>
                   <li><h3>{profile.data.firstName} {profile.data.lastName}</h3></li>
-                  <li>Просмотр выполненых заявок</li>
-                  <li><buuton onClick={logaut} className='profile-icon-button'>Выход</buuton></li>
+                  <li onClick={toStatusOrder}>Просмотр статуса заявок</li>
+                  <li><button onClick={logaut} className='profile-icon-button'>Выход</button></li>
                 </ul>
               </div>
             )}</li>

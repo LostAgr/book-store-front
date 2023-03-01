@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-status-list {
+    color: white;
+    width: 1280px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, .4);
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.order-wrapper {
+    display: flex;
+    list-style: none;
+    padding: 5px 0;
+    margin: 10px 0;
+}
+
+.button-status {
+    width: 8px;
+    height: 100%;
+    background-color: green;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.status-color {
+    flex: 0 0 28px;
+}
+
+.orderbooks {
+    flex: 0 0 440px;
+}
+
+.orderadress {
+    display: flex;
+    align-items: center;
+    flex: 0 0 300px;
+}
+
+.orderprice {
+    display: flex;
+    align-items: center;
+    flex: 0 0 248px;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    flex: 0 0 72px;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.orderbooks-list {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.orderbooks-list-title {
+    flex: 0 0 350px;
+}
+
+.orderbooks-list-cost {
+    font-size: 14px;
+}
+
+.order-items {
+    display: flex;
+    align-items: center;
+}
+
+.order-items-title {
+    flex: 0 0 250px;
+    padding: 5px 15px;
+}
+
+.order-item-created {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    flex: 0 0 180px;
+}
+
+.order-items-count {
+    font-size: 13px;
+    flex: 0 0 65px;
+}
+
+.order-items-cost {
+    font-size: 13px;
+    flex: 0 0 100px;
+}
+
+legend {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 3px 6px;
+    font-size: 12px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+fieldset {
+    border: 2px solid #c7c4c4;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.mb {
+    padding: 5px 0;
+}

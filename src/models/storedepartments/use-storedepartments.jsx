@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { API } from '../../common/API';
 
-export const useFetchStoreDepartmens = () => {
+export const useFetchStoreDepartments = () => {
 
     const [state, setState] = useState({ data:[], isLoading:false, isLoaded:false, error:null })
 
